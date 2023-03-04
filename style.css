@@ -118,7 +118,7 @@ html {
     border-radius: 16px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background: rgba(189, 189, 189, 0.6);
+    background: rgba(37, 37, 37, 0.5);
   }
 
   .fev-item {
