@@ -54,26 +54,26 @@ function closeSideBar() {
   const open_btn = document.getElementsByClassName('close')
   const sidebar = document.getElementsByClassName('sidebar')
   open_btn[0].style.display = 'flex'
-  document.documentElement.style.overflowY = 'auto'
   sidebar[0].style.width = '0'
+  document.documentElement.style.overflowY = 'auto'
 }
 
 function openSideBar() {
   const open_btn = document.getElementsByClassName('close')
   const sidebar = document.getElementsByClassName('sidebar')
   open_btn[0].style.display = 'none'
-  document.documentElement.style.overflowY = 'hidden'
   sidebar[0].style.width = '100vw'
+  document.documentElement.style.overflowY = 'hidden'
 }
 
 function expandPanel(i) {
   const items = document.getElementsByClassName('fev-item')
   for (let index = 0; index < items.length; index++) {
     const item = items[index];
-    if (i === 0 || i === 4) document.getElementById('sw-page').scrollIntoView()
-    if (i === 1 || i === 5) document.getElementById('htu-page').scrollIntoView()
-    if (i === 2 || i === 6) document.getElementById('n-page').scrollIntoView()
-    if (i === 3 || i === 7) document.getElementById('c-page').scrollIntoView()
+    if (i === 0 || i === 4) document.getElementById('sw-page').scrollIntoView({ behavior: 'smooth' })
+    if (i === 1 || i === 5) document.getElementById('htu-page').scrollIntoView({ behavior: 'smooth' })
+    if (i === 2 || i === 6) document.getElementById('n-page').scrollIntoView({ behavior: 'smooth' })
+    if (i === 3 || i === 7) document.getElementById('c-page').scrollIntoView({ behavior: 'smooth' })
     if (i < 4) document.getElementsByClassName('mobile-title')[0].innerHTML = items[i].innerHTML
     if (i === index) item.classList.add('selected')
     else item.classList.remove('selected')
