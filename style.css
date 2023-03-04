@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  background-color: rgb(200, 219, 255);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 700px) {
+  html {
+    scroll-padding: 4vh;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow-x: hidden;
+    right: 0;
+    padding: 1rem 0;
+    width: 0px;
+    height: 100%;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.6);
+    transition: 0.3s;
+  }
+
+  .sidebar > .close-btn {
+    display: flex;
+    justify-content: end;
+    margin: 0 2rem;
+  }
+
+  .sidebar > div {
+    white-space: nowrap;
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+  }
+
+  .sidebar > div:not(.close-btn) {
+    background: rgb(204, 215, 255);
+    border-radius: 12px;
+    margin: 0.25rem auto;
+    padding: 1rem;
+    width: 90%;
+  }
+
+  .close {
+    display: flex;
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+  }
+
+  .header > ul {
+    display: none;
+  }
+
+  .fev-group {
+    display: none;
+  }
+
+  .mobile-title {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: larger;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 701px) {
+  html {
+    scroll-padding: 16vh;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .mobile-title {
+    display: none;
+  }
+
+  .fev-group {
+    position: sticky;
+    top: 0;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .fev-panel {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1rem;
+    width: fit-content;
+    padding: 1.5rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  .fev-item {
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .item1 {
+    background: rgb(255, 255, 255);
+  }
+  .item2 {
+    background: rgb(255, 255, 255);
+  }
+  .item3 {
+    background: rgb(255, 255, 255);
+  }
+  .item4 {
+    background: rgb(255, 255, 255);
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  height: 8vh;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: row;
+  z-index: 10;
+}
+
+.logo {
+  padding: 0 1rem;
+  align-items: center;
+  display: flex;
+}
+
+.body {
+  padding: 0.5rem;
+  position: relative;
+  background-repeat: repeat;
+  background-size: 20em;
+  height: 100%;
+  /* background-image: url(https://tailwindcss.com/img/background-pattern.svg); */
+}
+
+.content {
+  padding: 4rem 2rem;
+  height: 100vh;
+}
+
+.card-content {
+  background: rgb(239, 244, 255);
+  border-radius: 24px;
+  height: 92vh;
+  padding: 2rem;
+}
+
+.selected {
+  box-shadow: inset 2px 2px 4px 1px rgba(165, 165, 165, 0.5);
+}
