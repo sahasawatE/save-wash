@@ -55,7 +55,7 @@ function closeSideBar() {
   const sidebar = document.getElementsByClassName('sidebar')
   open_btn[0].style.display = 'flex'
   sidebar[0].style.width = '0'
-  document.documentElement.style.overflowY = 'auto'
+  document.documentElement.style.overflow = 'auto'
 }
 
 function openSideBar() {
@@ -63,7 +63,7 @@ function openSideBar() {
   const sidebar = document.getElementsByClassName('sidebar')
   open_btn[0].style.display = 'none'
   sidebar[0].style.width = '100vw'
-  document.documentElement.style.overflowY = 'hidden'
+  document.documentElement.style.overflow = 'hidden'
 }
 
 function expandPanel(i) {

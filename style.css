@@ -6,11 +6,15 @@
 body {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
-  background-color: rgb(200, 219, 255);
+  background-color: rgb(69, 69, 69);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.fa-solid {
+  color: white;
 }
 
 @media only screen and (max-width: 700px) {
@@ -28,9 +32,7 @@ html {
     width: 0px;
     height: 100%;
     z-index: 100;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.6);
+    background-color: rgb(117, 117, 117);
     transition: 0.3s;
   }
 
@@ -45,10 +47,11 @@ html {
     display: block;
     margin: 0 auto;
     padding: 0.5rem 0;
+    color: white;
   }
 
   .sidebar > div:not(.close-btn) {
-    background: rgb(204, 215, 255);
+    /* background: rgb(255, 255, 255); */
     border-radius: 12px;
     margin: 0.25rem auto;
     padding: 1rem;
@@ -77,6 +80,7 @@ html {
     transform: translate(50%, -50%);
     font-size: larger;
     font-weight: bold;
+    color: white;
   }
 }
 
@@ -112,9 +116,9 @@ html {
     width: fit-content;
     padding: 1.5rem;
     border-radius: 16px;
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    background: rgba(189, 189, 189, 0.6);
   }
 
   .fev-item {
@@ -145,9 +149,9 @@ html {
   position: sticky;
   top: 0;
   height: 8vh;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(14px);
+  background: rgba(37, 37, 37, 0.5);
   -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   display: flex;
   flex-direction: row;
   z-index: 10;
@@ -174,12 +178,14 @@ html {
 }
 
 .card-content {
-  background: rgb(239, 244, 255);
+  background: rgb(255, 255, 255);
   border-radius: 24px;
   height: 92vh;
   padding: 2rem;
 }
 
 .selected {
-  box-shadow: inset 2px 2px 4px 1px rgba(165, 165, 165, 0.5);
+  /* box-shadow: inset 2px 2px 4px 1px rgba(165, 165, 165, 0.5); */
+  background: rgb(92, 92, 92);
+  color: white;
 }
