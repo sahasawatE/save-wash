@@ -81,30 +81,16 @@ function expandPanel(i) {
   if (i < 4) closeSideBar()
 }
 
-function openServiceModal() {
-  const service_modal = document.getElementById('service-modal')
-  service_modal.style.opacity = '1'
-  service_modal.style.zIndex = '1000'
+function openModal(elementId = "") {
+  const modal = document.getElementById(elementId)
+  modal.style.opacity = '1'
+  modal.style.zIndex = '1000'
   document.documentElement.style.overflow = 'hidden'
 }
 
-function closeServiceModal() {
-  const service_modal = document.getElementById('service-modal')
-  service_modal.style.opacity = '0'
-  service_modal.style.zIndex = '-1'
-  document.documentElement.style.overflow = 'auto'
-}
-
-function openProductModal() {
-  const service_modal = document.getElementById('product-modal')
-  service_modal.style.opacity = '1'
-  service_modal.style.zIndex = '1000'
-  document.documentElement.style.overflow = 'hidden'
-}
-
-function closeProductModal() {
-  const service_modal = document.getElementById('product-modal')
-  service_modal.style.opacity = '0'
-  service_modal.style.zIndex = '-1'
+function closeModal(elementId = "") {
+  const modal = document.getElementById(elementId)
+  modal.style.opacity = '0'
+  modal.style.zIndex = '-1'
   document.documentElement.style.overflow = 'auto'
 }

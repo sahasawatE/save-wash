@@ -6,15 +6,29 @@
 body {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
-  background-color: rgb(69, 69, 69);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100%;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding: 8vh;
 }
 
 button {
-  background-color: rgb(90, 90, 90);
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background: linear-gradient(
+      90deg,
+      var(--c1, #0eafea),
+      var(--c2, #23c6d5) 51%,
+      var(--c3, #23d5ab),
+      var(--c4, #09d770)
+    )
+    var(--x, 0) / 200%;
   border: 0 solid;
   padding: 0.5rem;
   border-radius: 8px;
@@ -23,22 +37,18 @@ button {
 }
 
 button:hover {
-  background-color: rgb(80, 80, 80);
+  --x: 51%;
 }
 
 button:active {
-  background-color: rgb(60, 60, 60);
+  --x: 100%;
 }
 
 .fa-solid {
-  color: white;
+  color: black;
 }
 
 @media only screen and (max-width: 900px) {
-  html {
-    scroll-padding: 4vh;
-  }
-
   .sidebar {
     display: flex;
     flex-direction: column;
@@ -49,7 +59,7 @@ button:active {
     width: 0px;
     height: 100%;
     z-index: 100;
-    background-color: rgb(117, 117, 117);
+    background-color: rgb(239, 239, 239);
     transition: 0.3s;
   }
 
@@ -64,7 +74,7 @@ button:active {
     display: block;
     margin: 0 auto;
     padding: 0.5rem 0;
-    color: white;
+    color: black;
   }
 
   .sidebar > div:not(.close-btn) {
@@ -72,7 +82,7 @@ button:active {
     border-radius: 12px;
     margin: 0.25rem auto;
     padding: 1rem;
-    width: 90%;
+    width: 80%;
   }
 
   .close {
@@ -98,7 +108,7 @@ button:active {
     transform: translate(50%, -50%);
     font-size: larger;
     font-weight: bold;
-    color: white;
+    color: black;
   }
 
   .modal {
@@ -124,13 +134,13 @@ button:active {
   .modal-content > div:not(.close-modal) {
     padding-top: 1rem;
   }
+
+  .modal-content > img:not(.close-modal) {
+    height: 88%;
+  }
 }
 
 @media only screen and (min-width: 901px) {
-  html {
-    scroll-padding: 16vh;
-  }
-
   .sidebar {
     display: none;
   }
@@ -144,11 +154,9 @@ button:active {
   }
 
   .fev-group {
-    position: sticky;
-    top: 0;
-    padding-top: 5rem;
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    right: 1rem;
+    top: 2vh;
   }
 
   .fev-panel {
@@ -156,34 +164,16 @@ button:active {
     grid-template-columns: auto auto auto auto;
     gap: 1rem;
     width: fit-content;
-    padding: 1.5rem;
-    border-radius: 16px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background: rgba(37, 37, 37, 0.5);
   }
 
   .fev-item {
-    padding: 0.8rem;
+    padding: 0.5rem;
     text-align: center;
-    border-radius: 12px;
+    border-radius: 8px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     cursor: pointer;
-  }
-
-  .item1 {
-    background: rgb(255, 255, 255);
-  }
-  .item2 {
-    background: rgb(255, 255, 255);
-  }
-  .item3 {
-    background: rgb(255, 255, 255);
-  }
-  .item4 {
-    background: rgb(255, 255, 255);
   }
 
   .modal {
@@ -213,6 +203,10 @@ button:active {
   .modal-content > div:not(.close-modal) {
     padding-top: 1rem;
   }
+
+  .modal-content > img:not(.close-modal) {
+    height: 96%;
+  }
 }
 .close-modal > i {
   color: red;
@@ -238,12 +232,28 @@ button:active {
   z-index: -1;
   opacity: 0;
 }
+#img1-modal {
+  z-index: -1;
+  opacity: 0;
+}
+#img2-modal {
+  z-index: -1;
+  opacity: 0;
+}
+#img3-modal {
+  z-index: -1;
+  opacity: 0;
+}
+#img4-modal {
+  z-index: -1;
+  opacity: 0;
+}
 
 .header {
   position: sticky;
   top: 0;
   height: 8vh;
-  background: rgba(37, 37, 37, 0.5);
+  background: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   display: flex;
@@ -257,6 +267,12 @@ button:active {
   display: flex;
 }
 
+.logo > img {
+  height: 6vh;
+  object-fit: contain;
+  border-radius: 25px;
+}
+
 .body {
   padding: 0.5rem;
   position: relative;
@@ -268,12 +284,12 @@ button:active {
 
 .content {
   padding: 4rem 2rem;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .card-content {
   background: rgb(255, 255, 255);
-  border-radius: 24px;
+  border-radius: 16px;
   height: 100%;
   padding: 1rem;
   display: flex;
@@ -284,14 +300,14 @@ button:active {
 
 .selected {
   /* box-shadow: inset 2px 2px 4px 1px rgba(165, 165, 165, 0.5); */
-  background: rgb(92, 92, 92);
-  color: white;
+  background: rgb(255, 255, 255);
+  color: black;
 }
 
 .services-content {
   background-color: rgb(235, 235, 235);
   padding: 1rem;
-  border-radius: 16px;
+  border-radius: 12px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -304,7 +320,7 @@ button:active {
 .products-content {
   background-color: rgb(235, 235, 235);
   padding: 1rem;
-  border-radius: 16px;
+  border-radius: 12px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -312,4 +328,30 @@ button:active {
 
 .products-content > p {
   padding-bottom: 2rem;
+}
+
+.sw-img {
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

@@ -30,13 +30,13 @@
       <div class="fev-item" onclick="expandPanel(3)">ติดต่อ</div>
     </div>
     <div class="header">
-      <div class="logo" style="color: red">LOGO</div>
+      <div class="logo">
+        <img src="./images/photo_2566-03-11 14.05.27.jpeg" alt="logo" />
+      </div>
       <div class="mobile-title">Save Wash</div>
       <div class="close">
         <i class="fa-solid fa-bars" onclick="openSideBar()"></i>
       </div>
-    </div>
-    <div class="body">
       <div class="fev-group">
         <div class="fev-panel">
           <div class="fev-item item1 selected" onclick="expandPanel(4)">
@@ -49,14 +49,104 @@
           <div class="fev-item item4" onclick="expandPanel(7)">ติดต่อ</div>
         </div>
       </div>
+    </div>
+    <div class="body">
       <div class="savewash content" id="sw-page">
         <div class="card-content">
-          1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          neque erat, hendrerit at lacus a, sagittis maximus enim. Maecenas
-          bibendum dolor at vehicula pretium. Fusce lobortis congue leo, et
-          fringilla erat iaculis id. Morbi quis ipsum dui. Nullam aliquam augue
-          urna, vitae finibus ligula interdum nec. Curabitur in ex sed quam
-          interdum sodales. Nullam tincidunt tellus eget mauris tempor commodo.
+          <p>
+            เรียนลูกค้าทุกท่านที่ต้องการล้างรถด้วยตนเอง ทางร้าน Save Wash
+            ขอเชิญชวนทุกท่านเข้ามาใช้บริการกับเรา ทั้งนี้
+            ทางร้านของเรามีชุดอุปกรณ์การล้างรถให้เช่า รวมถึงน้ำยาล้างรถ ผ้าขัด
+            และอุปกรณ์อื่นๆ ที่คุณต้องการสำหรับการล้างรถด้วยตนเอง และที่สำคัญคือ
+            เรามีพื้นที่สะอาดและกว้างขวางสำหรับลูกค้าทุกท่านที่ต้องการใช้บริการของเรา
+            โดยเรามุ่งมั่นที่จะให้บริการล้างรถด้วยตนเองให้มีคุณภาพสูงสุดเพื่อให้ลูกค้าพึงพอใจและรู้สึกว่าได้รับความช่วยเหลืออย่างเต็มที่จากทีมงานของเรา
+            สำหรับลูกค้าที่ต้องการเช็คราคาหรือต้องการข้อมูลเพิ่มเติม
+            สามารถติดต่อเราได้ที่หมายเลขโทรศัพท์
+            <a href="tel:+66 88-595-1460">088-595-1460</a>
+            หรือเข้ามาติดตามข้อมูลของเราได้ที่เพจ Facebook ของเราที่
+            <a
+              href="https://www.facebook.com/profile.php?id=100090545049617"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              เซฟวอช SaveWashล้างรถหยอดเหรียญ
+            </a>
+            ขอบคุณมากที่ไว้วางใจในการใช้บริการของเรา
+          </p>
+          <div class="gallery">
+            <img
+              src="./images/photo_2566-03-11 14.05.30.jpeg"
+              alt="img-sw-1"
+              class="sw-img"
+              onclick="openModal('img1-modal')"
+            />
+            <img
+              src="./images/photo_2566-03-11 14.05.31.jpeg"
+              alt="img-sw-2"
+              class="sw-img"
+              onclick="openModal('img2-modal')"
+            />
+            <img
+              src="./images/photo_2566-03-11 14.05.32.jpeg"
+              alt="img-sw-3"
+              class="sw-img"
+              onclick="openModal('img3-modal')"
+            />
+            <img
+              src="./images/photo_2566-03-11 14.05.33.jpeg"
+              alt="img-sw-4"
+              class="sw-img"
+              onclick="openModal('img4-modal')"
+            />
+          </div>
+          <div class="modal" id="img1-modal">
+            <div class="modal-content">
+              <div class="close-modal" onclick="closeModal('img1-modal')">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <img
+                src="./images/photo_2566-03-11 14.05.30.jpeg"
+                alt="img-sw-1"
+                class="sw-img"
+              />
+            </div>
+          </div>
+          <div class="modal" id="img2-modal">
+            <div class="modal-content">
+              <div class="close-modal" onclick="closeModal('img2-modal')">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <img
+                src="./images/photo_2566-03-11 14.05.31.jpeg"
+                alt="img-sw-2"
+                class="sw-img"
+              />
+            </div>
+          </div>
+          <div class="modal" id="img3-modal">
+            <div class="modal-content">
+              <div class="close-modal" onclick="closeModal('img3-modal')">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <img
+                src="./images/photo_2566-03-11 14.05.32.jpeg"
+                alt="img-sw-3"
+                class="sw-img"
+              />
+            </div>
+          </div>
+          <div class="modal" id="img4-modal">
+            <div class="modal-content">
+              <div class="close-modal" onclick="closeModal('img4-modal')">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <img
+                src="./images/photo_2566-03-11 14.05.33.jpeg"
+                alt="img-sw-4"
+                class="sw-img"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div class="howtouse content" id="htu-page">
@@ -71,11 +161,11 @@
               in ex sed quam interdum sodales. Nullam tincidunt tellus eget
               mauris tempor commodo.
             </p>
-            <button onclick="openServiceModal()">ดูเพิ่มเติม</button>
+            <button onclick="openModal('service-modal')">ดูเพิ่มเติม</button>
           </div>
           <div class="modal" id="service-modal">
             <div class="modal-content">
-              <div class="close-modal" onclick="closeServiceModal()">
+              <div class="close-modal" onclick="closeModal('service-modal')">
                 <i class="fa-solid fa-xmark"></i>
               </div>
               <div>
@@ -99,11 +189,11 @@
               in ex sed quam interdum sodales. Nullam tincidunt tellus eget
               mauris tempor commodo.
             </p>
-            <button onclick="openProductModal()">ดูเพิ่มเติม</button>
+            <button onclick="openModal('product-modal')">ดูเพิ่มเติม</button>
           </div>
           <div class="modal" id="product-modal">
             <div class="modal-content">
-              <div class="close-modal" onclick="closeProductModal()">
+              <div class="close-modal" onclick="closeModal('product-modal')">
                 <i class="fa-solid fa-xmark"></i>
               </div>
               <div>
